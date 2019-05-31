@@ -1,0 +1,18 @@
+<h1>
+    Posts</h1>
+
+<ul class="list-group">
+    <app-post *ngFor="let mensaje of mensajes | async" [mensaje]="mensaje" (clickPost)="escuchaClick($event)"></app-post>
+    <!--[mensaje] esta variable es la del input en el componente post.component.ts @Input() mensaje-->
+    <!--[mensaje] = mensaje  mensaje es del ngfor-->
+    <!--(clickPost)= es el evento que hace el hijo para que sepa el evento padre   ($event) es para recibir el evento de un componente hijo -->
+    <!--  
+        <li *ngFor="let mensaje of mensajes | async" class="list-group-item">
+              
+          <h2>{{ mensaje.title }}</h2>
+          <p>
+              {{ mensaje.body }}
+          </p>
+        -->
+
+</ul>
